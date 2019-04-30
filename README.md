@@ -1,6 +1,3 @@
-# Bahasa-NLP-Tensorflow
-Gathers Tensorflow deep learning models for Bahasa Malaysia NLP problems
-
 <p align="center">
     <a href="#readme">
         <img alt="logo" width="30%" src="cintailah-bahasa-malaysia-menggunakan-tensorflow.jpg">
