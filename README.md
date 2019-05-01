@@ -13,13 +13,18 @@
 
 ## Table of contents
   * [Speech to Text](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#speech-to-text)
+  * [Text to Speech](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#text-to-speech)
   * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
-
-### [Optical Character Recognition](optical-character-recognition)
-
-1. CNN + LSTM RNN
 
 ### [Speech to Text](speech-to-text)
 
 1. BiRNN + LSTM + CTC Greedy
 2. Wavenet
+
+### [Text to Speech](text-to-speech)
+
+1. Tacotron
+
+### [Optical Character Recognition](optical-character-recognition)
+
+1. CNN + LSTM RNN
