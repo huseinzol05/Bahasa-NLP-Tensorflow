@@ -37,3 +37,5 @@ python3 caching.py
 ```
 
 6. Run any notebook using Jupyter Notebook.
+
+**For more models, you can check in https://github.com/huseinzol05/NLP-Models-Tensorflow/tree/master/speech-to-text, but the dataset is not Bahasa Malaysia**
