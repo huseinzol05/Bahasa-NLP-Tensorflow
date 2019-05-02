@@ -20,6 +20,7 @@
 
 1. BiRNN + LSTM + CTC Greedy
 2. Wavenet
+3. Deep speech 2
 
 ### [Text to Speech](text-to-speech)
 
