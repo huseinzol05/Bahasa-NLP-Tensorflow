@@ -12,9 +12,19 @@
 **Bahasa-NLP-Tensorflow**, Gathers Tensorflow deep learning models for Bahasa Malaysia NLP problems, **code simplify inside Jupyter Notebooks 100% including dataset**.
 
 ## Table of contents
+  * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
+  * [Question-Answer](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#question-answer)
   * [Speech to Text](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#speech-to-text)
   * [Text to Speech](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#text-to-speech)
-  * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
+
+### [Optical Character Recognition](optical-character-recognition)
+
+1. CNN + LSTM RNN
+
+### [Question-Answer](question-answer)
+
+1. End-to-End + GRU
+2. Dynamic Memory + GRU
 
 ### [Speech to Text](speech-to-text)
 
@@ -25,7 +35,3 @@
 ### [Text to Speech](text-to-speech)
 
 1. Tacotron
-
-### [Optical Character Recognition](optical-character-recognition)
-
-1. CNN + LSTM RNN
