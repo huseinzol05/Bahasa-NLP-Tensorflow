@@ -4,7 +4,7 @@
     </a>
 </p>
 <p align="center">
-  <a href="https://github.com/huseinzol05/Bahasa-NLP-Tensorflow/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="https://github.com/mesolitica/Bahasa-NLP-Tensorflow/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
 </p>
 
 ---
@@ -12,10 +12,24 @@
 **Bahasa-NLP-Tensorflow**, Gathers Tensorflow deep learning models for Bahasa Malaysia NLP problems, **code simplify inside Jupyter Notebooks 100% including dataset**.
 
 ## Table of contents
-  * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
-  * [Question-Answer](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#question-answer)
-  * [Speech to Text](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#speech-to-text)
-  * [Text to Speech](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#text-to-speech)
+  * [Entity Tagging](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#entity-tagging)
+  * [POS Tagging](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#pos-tagging)
+  * [Optical Character Recognition](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#optical-character-recognition)
+  * [Question-Answer](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#question-answer)
+  * [Speech to Text](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#speech-to-text)
+  * [Text to Speech](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#text-to-speech)
+
+### [Entity Tagging](entity-tagging)
+
+1. Bidirectional LSTM + CRF
+2. Bidirectional LSTM + CRF + Bahdanau
+3. Bidirectional LSTM + CRF + Luong
+
+### [POS Tagging](pos-tagging)
+
+1. Bidirectional LSTM + CRF
+2. Bidirectional LSTM + CRF + Bahdanau
+3. Bidirectional LSTM + CRF + Luong
 
 ### [Optical Character Recognition](optical-character-recognition)
 
