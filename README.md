@@ -17,6 +17,7 @@
   * [Optical Character Recognition](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#optical-character-recognition)
   * [Question-Answer](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#question-answer)
   * [Speech to Text](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#speech-to-text)
+  * [Stemming](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#stemming)
   * [Text to Speech](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#text-to-speech)
 
 ### [Entity Tagging](entity-tagging)
@@ -45,6 +46,12 @@
 1. BiRNN + LSTM + CTC Greedy
 2. Wavenet
 3. Deep speech 2
+
+### [Stemming](stemming)
+
+1. Seq2seq + Beam decoder
+2. Seq2seq + Bahdanau Attention + Beam decoder
+3. Seq2seq + Luong Attention + Beam decoder
 
 ### [Text to Speech](text-to-speech)
 
