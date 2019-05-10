@@ -19,6 +19,7 @@
   * [Speech to Text](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#speech-to-text)
   * [Stemming](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#stemming)
   * [Text to Speech](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#text-to-speech)
+  * [Word Vector](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#word-vector)
 
 ### [Entity Tagging](entity-tagging)
 
@@ -56,3 +57,9 @@
 ### [Text to Speech](text-to-speech)
 
 1. Tacotron
+
+### [Word Vector](word-vector)
+
+1. word2vec
+2. ELMO
+3. Fast-text
