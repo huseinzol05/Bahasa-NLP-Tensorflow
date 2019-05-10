@@ -19,6 +19,7 @@
   * [Speech to Text](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#speech-to-text)
   * [Stemming](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#stemming)
   * [Text to Speech](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#text-to-speech)
+  * [Topic Modeling](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#topic-modeling)
   * [Word Vector](https://github.com/mesolitica/Bahasa-NLP-Tensorflow#word-vector)
 
 ### [Entity Tagging](entity-tagging)
@@ -57,6 +58,10 @@
 ### [Text to Speech](text-to-speech)
 
 1. Tacotron
+
+### [Topic Modeling](topic-modeling)
+
+1. Lda2Vec
 
 ### [Word Vector](word-vector)
 
