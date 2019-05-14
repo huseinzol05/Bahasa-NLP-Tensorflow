@@ -13,6 +13,7 @@
 
 ## Table of contents
   * [Augmentation](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#augmentation)
+  * [Sparse classification](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#sparse-classification)
   * [Dependency Parsing](https://github.com/huseinzol05/Bahasa-Models-Tensorflow#dependency-parsing)
   * [Entity Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#entity-tagging)
   * [POS Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#pos-tagging)
@@ -28,6 +29,10 @@
 ### [Augmentation](augmentation)
 
 1. word2vec Malaya
+
+### [Sparse classification](sparse-classification)
+
+1. Fast-text Ngrams
 
 ### [Dependency Parsing](dependency-parsing)
 
