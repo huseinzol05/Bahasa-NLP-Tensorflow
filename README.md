@@ -13,6 +13,7 @@
 
 ## Table of contents
   * [Augmentation](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#augmentation)
+  * [Dependency Parsing](https://github.com/huseinzol05/Bahasa-Models-Tensorflow#dependency-parsing)
   * [Entity Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#entity-tagging)
   * [POS Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#pos-tagging)
   * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
@@ -27,6 +28,12 @@
 ### [Augmentation](augmentation)
 
 1. word2vec Malaya
+
+### [Dependency Parsing](dependency-parsing)
+
+1. Bidirectional LSTM + CRF
+2. Bidirectional LSTM + CRF + Bahdanau
+3. Bidirectional LSTM + CRF + Luong
 
 ### [Entity Tagging](entity-tagging)
 
