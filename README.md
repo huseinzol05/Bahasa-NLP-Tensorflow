@@ -35,6 +35,13 @@
 
 1. Fast-text Ngrams
 
+### [Normal-text classification](normal-text-classification)
+
+1. Fast-text
+2. Only Attention
+
+70+ more models can get from [here](https://github.com/huseinzol05/NLP-Models-Tensorflow/tree/master/text-classification).
+
 ### [Long-text classification](long-text-classification)
 
 1. Dilated CNN
