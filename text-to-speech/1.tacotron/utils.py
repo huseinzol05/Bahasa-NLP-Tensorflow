@@ -31,7 +31,7 @@ encoder_num_banks = 16
 decoder_num_banks = 8
 num_highwaynet_blocks = 4
 resampled = 5
-dropout_rate = 0.5
+dropout_rate = 0.05
 learning_rate = 0.001
 batch_size = 32
 
@@ -120,12 +120,14 @@ def get_cached(path):
     mag = '../mag/{}.npy'.format(path)
     return np.load(mel), np.load(mag)
 
+
 def plot_alignment(alignment, e):
     fig, ax = plt.subplots()
     im = ax.imshow(alignment)
     fig.colorbar(im)
-    plt.title('epoch %d'%(e))
+    plt.title('epoch %d' % (e))
     plt.show()
+
 
 char2idx = {char: idx for idx, char in enumerate(vocab)}
 idx2char = {idx: char for idx, char in enumerate(vocab)}

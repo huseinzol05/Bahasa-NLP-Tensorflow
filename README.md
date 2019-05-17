@@ -14,6 +14,7 @@
 ## Table of contents
   * [Augmentation](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#augmentation)
   * [Sparse classification](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#sparse-classification)
+  * [Long-text classification](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#long-text-classification)
   * [Dependency Parsing](https://github.com/huseinzol05/Bahasa-Models-Tensorflow#dependency-parsing)
   * [Entity Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#entity-tagging)
   * [POS Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#pos-tagging)
@@ -33,6 +34,11 @@
 ### [Sparse classification](sparse-classification)
 
 1. Fast-text Ngrams
+
+### [Long-text classification](long-text-classification)
+
+1. Dilated CNN
+2. Wavenet
 
 ### [Dependency Parsing](dependency-parsing)
 
