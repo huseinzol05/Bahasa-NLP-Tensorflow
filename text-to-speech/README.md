@@ -8,6 +8,10 @@ pip3 install librosa numpy scipy
 2. Download dataset from here, https://s3-ap-southeast-1.amazonaws.com/malaya-dataset/speech-bahasa.zip
 
 3. Unzip it, and you will get 3 folders,
+```bash
+unzip speech-bahasa.zip
+```
+
 ```text
 sebut-perkataan-man
 sebut-perkataan-woman

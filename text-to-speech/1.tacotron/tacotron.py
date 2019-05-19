@@ -11,6 +11,21 @@ def learning_rate_decay(init_lr, global_step, warmup_steps = 4000.0):
     )
 
 
+max_N = 50
+max_T = 120
+
+
+def guided_attention(g = 0.2):
+    W = np.zeros((max_N, max_T), dtype = np.float32)
+    for n_pos in range(W.shape[0]):
+        for t_pos in range(W.shape[1]):
+            W[n_pos, t_pos] = 1 - np.exp(
+                -(t_pos / float(max_T) - n_pos / float(max_N)) ** 2
+                / (2 * g * g)
+            )
+    return W
+
+
 def prenet(inputs, num_units = None, is_training = True, scope = 'prenet'):
     if num_units is None:
         num_units = [embed_size, embed_size // 2]
@@ -132,11 +147,13 @@ class Tacotron:
         self.decoder_inputs = tf.concat(
             (tf.zeros_like(self.Y[:, :1, :]), self.Y[:, :-1, :]), 1
         )
+        self.gts = tf.convert_to_tensor(guided_attention())
         self.decoder_inputs = self.decoder_inputs[:, :, -n_mels:]
         self.Z = tf.placeholder(
             tf.float32, (None, None, fourier_window_size // 2 + 1)
         )
         self.training = tf.placeholder(tf.bool, None)
+        batch_size = tf.shape(self.X)[0]
         with tf.variable_scope('encoder', reuse = reuse):
             prenet_out_encoder = prenet(embedded, is_training = self.training)
             enc = conv1d_banks(
@@ -173,20 +190,11 @@ class Tacotron:
             with tf.variable_scope('encoder-gru', reuse = reuse):
                 cell = tf.contrib.rnn.GRUCell(embed_size // 2)
                 cell_bw = tf.contrib.rnn.GRUCell(embed_size // 2)
-                outputs, _ = tf.nn.bidirectional_dynamic_rnn(
+                outputs, states = tf.nn.bidirectional_dynamic_rnn(
                     cell, cell_bw, enc, dtype = tf.float32
                 )
                 self.memory = tf.concat(outputs, 2)
-                self.output = tf.layers.dense(self.memory, len(vocab))
-                self.X_seq_len = tf.count_nonzero(self.X, 1, dtype = tf.int32)
-                masks = tf.sequence_mask(
-                    self.X_seq_len,
-                    tf.reduce_max(self.X_seq_len),
-                    dtype = tf.float32,
-                )
-                self.seq_loss = tf.contrib.seq2seq.sequence_loss(
-                    logits = self.output, targets = self.X, weights = masks
-                )
+                states = tf.concat(states, 1)
         with tf.variable_scope('decoder-1', reuse = reuse):
             prenet_out_decoder1 = prenet(
                 self.decoder_inputs, is_training = self.training
@@ -202,8 +210,14 @@ class Tacotron:
                     embed_size,
                     alignment_history = True,
                 )
+                encoder_state = cell_with_attention.zero_state(
+                    batch_size, tf.float32
+                ).clone(cell_state = states)
                 outputs_attention, state_attention = tf.nn.dynamic_rnn(
-                    cell_with_attention, prenet_out_decoder1, dtype = tf.float32
+                    cell_with_attention,
+                    prenet_out_decoder1,
+                    initial_state = encoder_state,
+                    dtype = tf.float32,
                 )
             self.alignments = tf.transpose(
                 state_attention.alignment_history.stack(), [1, 2, 0]
@@ -222,9 +236,7 @@ class Tacotron:
                 outputs_attention += outputs
             self.Y_hat = tf.layers.dense(outputs_attention, n_mels * resampled)
         with tf.variable_scope('decoder-2', reuse = reuse):
-            out_decoder2 = tf.reshape(
-                self.Y_hat, [tf.shape(self.Y_hat)[0], -1, n_mels]
-            )
+            out_decoder2 = tf.reshape(self.Y, [tf.shape(self.Y)[0], -1, n_mels])
             dec = conv1d_banks(
                 out_decoder2, K = decoder_num_banks, is_training = self.training
             )
@@ -262,11 +274,37 @@ class Tacotron:
                 )
                 outputs = tf.concat(outputs, 2)
             self.Z_hat = tf.layers.dense(outputs, 1 + fourier_window_size // 2)
-        self.loss1 = tf.reduce_mean(tf.abs(self.Y - self.Y_hat))
-        self.loss2 = tf.reduce_mean(tf.abs(self.Z - self.Z_hat))
-        self.loss = self.loss1 + self.loss2 + self.seq_loss
-        self.optimizer = tf.train.AdamOptimizer(learning_rate = 1e-3).minimize(
-            self.loss
+        self.loss1 = tf.reduce_mean(tf.abs(self.Y_hat - self.Y))
+        self.loss2 = tf.reduce_mean(tf.abs(self.Z_hat - self.Z))
+        self.loss_bd1 = tf.reduce_mean(
+            tf.nn.sigmoid_cross_entropy_with_logits(
+                logits = self.Y_hat, labels = self.Y
+            )
+        )
+        self.A = tf.pad(
+            self.alignments,
+            [(0, 0), (0, max_N), (0, max_T)],
+            mode = 'CONSTANT',
+            constant_values = -1.0,
+        )[:, :max_N, :max_T]
+        self.attention_masks = tf.to_float(tf.not_equal(self.A, -1))
+        self.loss_att = tf.reduce_sum(
+            tf.abs(self.A * self.gts) * self.attention_masks
+        )
+        self.mask_sum = tf.reduce_sum(self.attention_masks)
+        self.loss_att /= self.mask_sum
+        self.loss_bd2 = tf.reduce_mean(
+            tf.nn.sigmoid_cross_entropy_with_logits(
+                logits = self.Z_hat, labels = self.Z
+            )
+        )
+
+        self.loss = (
+            self.loss1
+            + self.loss2
+            + self.loss_bd1
+            + self.loss_att
+            + self.loss_bd2
         )
 
         self.global_step = tf.Variable(
