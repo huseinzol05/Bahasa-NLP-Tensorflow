@@ -17,6 +17,7 @@
   * [Long-text classification](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#long-text-classification)
   * [Dependency Parsing](https://github.com/huseinzol05/Bahasa-Models-Tensorflow#dependency-parsing)
   * [Entity Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#entity-tagging)
+  * [Abstractive Summarization](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#abstractive-summarization)
   * [Extractive Summarization](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#extractive-summarization)
   * [POS Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#pos-tagging)
   * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
@@ -66,6 +67,12 @@
 2. Bidirectional LSTM + CRF + Bahdanau
 3. Bidirectional LSTM + CRF + Luong
 
+### [Abstractive Summarization](abstractive-summarization)
+
+1. Dilated Seq2Seq
+2. Pointer Generator + Bahdanau Attention
+3. Pointer Generator + Luong Attention
+
 ### [Extractive Summarization](extractive-summarization)
 
 1. Skip-thought
@@ -86,6 +93,12 @@
 2. Wavenet
 3. Deep speech 2
 
+### [Text to Speech](text-to-speech)
+
+1. Tacotron
+2. Seq2Seq + Bahdanau Attention
+3. Deep CNN + Monothonic Attention + Dilated CNN vocoder
+
 ### [Stemming](stemming)
 
 1. Seq2seq + Beam decoder
@@ -97,12 +110,6 @@
 1. TAT-LSTM
 2. TAV-LSTM
 3. MTA-LSTM
-
-### [Text to Speech](text-to-speech)
-
-1. Tacotron
-2. Seq2Seq + Bahdanau Attention
-3. Deep CNN + Monothonic Attention + Dilated CNN vocoder
 
 ### [Topic Modeling](topic-modeling)
 
