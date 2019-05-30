@@ -39,15 +39,16 @@
 
 ### [Normal-text classification](normal-text-classification)
 
-1. Fast-text
-2. Only Attention
+1. RNN LSTM + Bahdanau Attention, test accuracy 84%
+2. RNN LSTM + Luong Attention, test accuracy 82%
+3. Transfer-learning Multilanguage BERT, test accuracy 51.0676%
 
 70+ more models can get from [here](https://github.com/huseinzol05/NLP-Models-Tensorflow/tree/master/text-classification).
 
 ### [Long-text classification](long-text-classification)
 
-1. Dilated CNN
-2. Wavenet
+1. Dilated CNN, test accuracy 74%
+2. Wavenet, test accuracy 68%
 
 ### [Dependency Parsing](dependency-parsing)
 

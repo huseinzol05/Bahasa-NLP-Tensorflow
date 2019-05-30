@@ -2,12 +2,8 @@
 
 1. Download dataset from here,
 ```bash
-wget https://s3-ap-southeast-1.amazonaws.com/malaya-dataset/twitter-sentiment.zip
+wget https://github.com/huseinzol05/Malaya-Dataset/raw/master/subjectivity/subjectivity-negative-bm.txt
+wget https://github.com/huseinzol05/Malaya-Dataset/raw/master/subjectivity/subjectivity-positive-bm.txt
 ```
 
-2. Unzip the dataset,
-```bash
-unzip twitter-sentiment.zip
-```
-
-3. Run any notebook using Jupyter Notebook.
+2. Run any notebook using Jupyter Notebook.
