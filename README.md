@@ -73,6 +73,8 @@
 1. Dilated Seq2Seq, train accuracy 83.13%
 2. Pointer Generator + Bahdanau Attention, train accuracy 41.69%
 3. Pointer Generator + Luong Attention, train accuracy 69%
+4. Dilated Seq2Seq + Self Attention, train accuracy 58.07%
+5. Dilated Seq2Seq + Self Attention + Pointer Generator, train accuracy 73.64%
 
 ### [Extractive Summarization](extractive-summarization)
 
