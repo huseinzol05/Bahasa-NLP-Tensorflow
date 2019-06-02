@@ -41,7 +41,7 @@
 
 1. RNN LSTM + Bahdanau Attention, test accuracy 84%
 2. RNN LSTM + Luong Attention, test accuracy 82%
-3. Transfer-learning Multilanguage BERT, test accuracy 51.0676%
+3. Transfer-learning Multilanguage BERT, test accuracy 90.51%
 
 70+ more models can get from [here](https://github.com/huseinzol05/NLP-Models-Tensorflow/tree/master/text-classification).
 
