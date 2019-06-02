@@ -70,9 +70,9 @@
 
 ### [Abstractive Summarization](abstractive-summarization)
 
-1. Dilated Seq2Seq
-2. Pointer Generator + Bahdanau Attention
-3. Pointer Generator + Luong Attention
+1. Dilated Seq2Seq, train accuracy 83.13%
+2. Pointer Generator + Bahdanau Attention, train accuracy 41.69%
+3. Pointer Generator + Luong Attention, train accuracy 69%
 
 ### [Extractive Summarization](extractive-summarization)
 
