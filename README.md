@@ -16,6 +16,7 @@
   * [Sparse classification](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#sparse-classification)
   * [Long-text classification](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#long-text-classification)
   * [Dependency Parsing](https://github.com/huseinzol05/Bahasa-Models-Tensorflow#dependency-parsing)
+  * [English-Malay Translation](https://github.com/huseinzol05/Bahasa-Models-Tensorflow#english-malay-translation)
   * [Entity Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#entity-tagging)
   * [Abstractive Summarization](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#abstractive-summarization)
   * [Extractive Summarization](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#extractive-summarization)
@@ -55,6 +56,14 @@
 1. Bidirectional LSTM + CRF
 2. Bidirectional LSTM + CRF + Bahdanau
 3. Bidirectional LSTM + CRF + Luong
+
+### [English-Malay Translation](english-malay-translation)
+
+1. Attention is All you need, train accuracy 19.09% test accuracy 20.38%
+2. BiRNN Seq2Seq Luong Attention, Beam decoder, train accuracy 45.2% test accuracy 37.26%
+3. Convolution Encoder Decoder, train accuracy 35.89% test accuracy 30.65%
+4. Dilated Convolution Encoder Decoder, train accuracy 82.3% test accuracy 56.72%
+5. Dilated Convolution Encoder Decoder Self-Attention, train accuracy 60.76% test accuracy 36.59%
 
 ### [Entity Tagging](entity-tagging)
 
