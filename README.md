@@ -59,6 +59,8 @@
 
 ### [English-Malay Translation](english-malay-translation)
 
+This result after 20 epochs only,
+
 1. Attention is All you need, train accuracy 19.09% test accuracy 20.38%
 2. BiRNN Seq2Seq Luong Attention, Beam decoder, train accuracy 45.2% test accuracy 37.26%
 3. Convolution Encoder Decoder, train accuracy 35.89% test accuracy 30.65%
