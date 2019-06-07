@@ -40,6 +40,8 @@
 
 ### [Normal-text classification](normal-text-classification)
 
+This result based on early-stopping,
+
 1. RNN LSTM + Bahdanau Attention, test accuracy 84%
 2. RNN LSTM + Luong Attention, test accuracy 82%
 3. Transfer-learning Multilanguage BERT, test accuracy 94.88%
@@ -47,6 +49,8 @@
 70+ more models can get from [here](https://github.com/huseinzol05/NLP-Models-Tensorflow/tree/master/text-classification).
 
 ### [Long-text classification](long-text-classification)
+
+This result based on early-stopping,
 
 1. Dilated CNN, test accuracy 74%
 2. Wavenet, test accuracy 68%
@@ -80,6 +84,8 @@ This result after 20 epochs only,
 3. Bidirectional LSTM + CRF + Luong
 
 ### [Abstractive Summarization](abstractive-summarization)
+
+This result after 10 epochs only,
 
 1. Dilated Seq2Seq, train accuracy 83.13%
 2. Pointer Generator + Bahdanau Attention, train accuracy 41.69%
