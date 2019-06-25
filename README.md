@@ -23,6 +23,7 @@
   * [POS Tagging](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#pos-tagging)
   * [Optical Character Recognition](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#optical-character-recognition)
   * [Question-Answer](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#question-answer)
+  * [Semantic Similarity](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#semantic-similarity)
   * [Speech to Text](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#speech-to-text)
   * [Stemming](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#stemming)
   * [Topic Generator](https://github.com/huseinzol05/Bahasa-NLP-Tensorflow#topic-generator)
@@ -36,11 +37,13 @@
 
 ### [Sparse classification](sparse-classification)
 
-1. Fast-text Ngrams
+Trained on [Tatoeba dataset](http://downloads.tatoeba.org/exports/sentences.tar.bz2).
+
+1. Fast-text Ngrams, test accuracy 88%
 
 ### [Normal-text classification](normal-text-classification)
 
-This result based on early-stopping,
+Trained on [Bahasa subjectivity dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/subjectivity).
 
 1. RNN LSTM + Bahdanau Attention, test accuracy 84%
 2. RNN LSTM + Luong Attention, test accuracy 82%
@@ -50,12 +53,14 @@ This result based on early-stopping,
 
 ### [Long-text classification](long-text-classification)
 
-This result based on early-stopping,
+Trained on [Bahasa fakenews dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/fake-news).
 
 1. Dilated CNN, test accuracy 74%
 2. Wavenet, test accuracy 68%
 
 ### [Dependency Parsing](dependency-parsing)
+
+Trained on [Bahasa dependency parsing dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/dependency).
 
 1. Bidirectional LSTM + CRF
 2. Bidirectional LSTM + CRF + Bahdanau
@@ -63,7 +68,7 @@ This result based on early-stopping,
 
 ### [English-Malay Translation](english-malay-translation)
 
-This result after 20 epochs only,
+Trained on [100k english-malay dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/english-malay).
 
 1. Attention is All you need, train accuracy 19.09% test accuracy 20.38%
 2. BiRNN Seq2Seq Luong Attention, Beam decoder, train accuracy 45.2% test accuracy 37.26%
@@ -73,11 +78,15 @@ This result after 20 epochs only,
 
 ### [Entity Tagging](entity-tagging)
 
+Trained on [Bahasa entity dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/entities).
+
 1. Bidirectional LSTM + CRF
 2. Bidirectional LSTM + CRF + Bahdanau
 3. Bidirectional LSTM + CRF + Luong
 
 ### [POS Tagging](pos-tagging)
+
+Trained on [Bahasa entity dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/part-of-speech).
 
 1. Bidirectional LSTM + CRF
 2. Bidirectional LSTM + CRF + Bahdanau
@@ -85,7 +94,7 @@ This result after 20 epochs only,
 
 ### [Abstractive Summarization](abstractive-summarization)
 
-This result after 10 epochs only,
+Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/news).
 
 1. Dilated Seq2Seq, train accuracy 83.13%
 2. Pointer Generator + Bahdanau Attention, train accuracy 41.69%
@@ -95,23 +104,38 @@ This result after 10 epochs only,
 
 ### [Extractive Summarization](extractive-summarization)
 
+Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/news).
+
 1. Skip-thought
 2. Residual Network + Bahdanau Attention
 
 ### [Optical Character Recognition](optical-character-recognition)
 
-1. CNN + LSTM RNN
+1. CNN + LSTM RNN, test accuracy 91.22%
 
 ### [Question-Answer](question-answer)
 
-1. End-to-End + GRU
-2. Dynamic Memory + GRU
+Trained on [Bahasa QA dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/question-answer).
+
+1. End-to-End + GRU, test accuracy 89.17%
+2. Dynamic Memory + GRU, test accuracy 98.86%
+
+### [Semantic Similarity](semantic-similarity)
+
+Trained on [Translated Duplicated Quora question dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/text-similarity/quora).
+
+1. LSTM Bahdanau + Contrastive loss, test accuracy 79%
+2. Dilated CNN + Contrastive loss, test accuracy 77%
+3. Self-Attention + Contrastive loss, test accuracy 77%
+4. BERT + Cross entropy, test accuracy 83%
 
 ### [Speech to Text](speech-to-text)
 
-1. BiRNN + LSTM + CTC Greedy
-2. Wavenet
-3. Deep speech 2
+Trained on [Kamus speech dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/speech).
+
+1. BiRNN + LSTM + CTC Greedy, test accuracy 95.96%
+2. Wavenet, test accuracy 66.22%
+3. Deep speech 2, test accuracy 48.38%
 
 ### [Text to Speech](text-to-speech)
 
@@ -121,15 +145,19 @@ This result after 10 epochs only,
 
 ### [Stemming](stemming)
 
+Trained on [stemming dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/stemmer).
+
 1. Seq2seq + Beam decoder
 2. Seq2seq + Bahdanau Attention + Beam decoder
 3. Seq2seq + Luong Attention + Beam decoder
 
 ### [Topic Generator](topic-generator)
 
-1. TAT-LSTM
-2. TAV-LSTM
-3. MTA-LSTM
+Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/news).
+
+1. TAT-LSTM, test accuracy 32.89%
+2. TAV-LSTM, test accuracy 40.69%
+3. MTA-LSTM, test accuracy 32.96%
 
 ### [Topic Modeling](topic-modeling)
 
