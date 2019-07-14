@@ -101,7 +101,7 @@ Accuracy based on ROUGE-2 after 20 epochs only.
 1. Dilated Seq2Seq, test accuracy 18.32%
 2. Pointer Generator + Bahdanau Attention, test accuracy 32.75%
 3. Pointer Generator + Luong Attention, test accuracy 40.15%
-4. Dilated Seq2Seq + Pointer Generator, test accuracy 43.57%
+4. Dilated Seq2Seq + Pointer Generator, test accuracy 24.83%
 
 ### [Extractive Summarization](extractive-summarization)
 
