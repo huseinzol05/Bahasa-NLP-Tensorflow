@@ -94,13 +94,14 @@ Trained on [Bahasa entity dataset](https://github.com/huseinzol05/Malaya-Dataset
 
 ### [Abstractive Summarization](abstractive-summarization)
 
-Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/news).
+Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset#30k-news).
 
-1. Dilated Seq2Seq, train accuracy 83.13%
-2. Pointer Generator + Bahdanau Attention, train accuracy 41.69%
-3. Pointer Generator + Luong Attention, train accuracy 69%
-4. Dilated Seq2Seq + Self Attention, train accuracy 58.07%
-5. Dilated Seq2Seq + Self Attention + Pointer Generator, train accuracy 73.64%
+Accuracy based on ROUGE-2 after 20 epochs only.
+
+1. Dilated Seq2Seq, test accuracy 18.32%
+2. Pointer Generator + Bahdanau Attention, test accuracy 32.75%
+3. Pointer Generator + Luong Attention, test accuracy 40.15%
+4. Dilated Seq2Seq + Pointer Generator, test accuracy 43.57%
 
 ### [Extractive Summarization](extractive-summarization)
 
