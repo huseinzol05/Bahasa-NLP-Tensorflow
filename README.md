@@ -80,9 +80,13 @@ Trained on [100k english-malay dataset](https://github.com/huseinzol05/Malaya-Da
 
 Trained on [Bahasa entity dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/entities).
 
-1. Bidirectional LSTM + CRF
-2. Bidirectional LSTM + CRF + Bahdanau
-3. Bidirectional LSTM + CRF + Luong
+1. Bidirectional LSTM + CRF, test accuracy 95.10%
+2. Bidirectional LSTM + CRF + Bahdanau, test accuracy 94.34%
+3. Bidirectional LSTM + CRF + Luong, test accuracy 94.84%
+4. BERT Multilanguage, test accuracy 96.43%
+5. BERT-Bahasa Base, test accuracy 98.11%
+6. BERT-Bahasa Small, test accuracy 98.47%
+7. XLNET-Bahasa Base, test accuracy 31.47%
 
 ### [POS Tagging](pos-tagging)
 
