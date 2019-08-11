@@ -57,6 +57,8 @@ Trained on [Bahasa fakenews dataset](https://github.com/huseinzol05/Malaya-Datas
 
 1. Dilated CNN, test accuracy 74%
 2. Wavenet, test accuracy 68%
+3. BERT Multilanguage, test accuracy 85%
+4. BERT-Bahasa Base, test accuracy 88%
 
 ### [Dependency Parsing](dependency-parsing)
 
