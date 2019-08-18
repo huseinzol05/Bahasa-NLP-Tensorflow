@@ -5,7 +5,8 @@
 pip3 install librosa numpy scipy
 ```
 
-2. Download dataset from here, https://s3-ap-southeast-1.amazonaws.com/malaya-dataset/speech-bahasa.zip
+2. Download dataset from here, https://s3-ap-southeast-1.amazonaws.com/malaya-dataset/speech-bahasa.zip,
+also https://raw.githubusercontent.com/huseinzol05/Malaya-Dataset/master/speech/train-test.json
 
 3. Unzip it, and you will get 3 folders,
 ```text

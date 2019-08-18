@@ -141,9 +141,10 @@ Trained on [Translated Duplicated Quora question dataset](https://github.com/hus
 
 Trained on [Kamus speech dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/speech).
 
-1. BiRNN + LSTM + CTC Greedy, test accuracy 95.96%
-2. Wavenet, test accuracy 66.22%
-3. Deep speech 2, test accuracy 48.38%
+1. BiRNN + LSTM + CTC Greedy, test accuracy 72.03%
+2. Wavenet, test accuracy 10.21%
+3. Deep speech 2, test accuracy 56.51%
+4. Dilated-CNN, test accuracy 59.31%
 
 ### [Text to Speech](text-to-speech)
 

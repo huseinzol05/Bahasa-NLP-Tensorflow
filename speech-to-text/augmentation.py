@@ -2,6 +2,7 @@ import numpy as np
 import librosa
 import os
 import scipy
+import json
 
 
 def change_pitch_speech(samples):
@@ -84,27 +85,19 @@ def random_augmentation(samples):
     return cp
 
 
-tolong_sebut = [
-    'tolong-sebut/' + i for i in os.listdir('tolong-sebut') if '.wav' in i
-]
-sebut_perkataan_man = [
-    'sebut-perkataan-man/' + i
-    for i in os.listdir('sebut-perkataan-man')
-    if '.wav' in i
-]
-sebut_perkataan_woman = [
-    'sebut-perkataan-woman/' + i
-    for i in os.listdir('sebut-perkataan-woman')
-    if '.wav' in i
-]
+with open('train-test.json') as fopen:
+    wavs = json.load(fopen)['train']
 
-wavs = tolong_sebut + sebut_perkataan_man + sebut_perkataan_woman
+if not os.path.exists('augment'):
+    os.makedirs('augment')
 
 for no, wav in enumerate(wavs):
     try:
         root, ext = os.path.splitext(wav)
         if (no + 1) % 100 == 0:
             print(no + 1, root, ext)
+        root = root.replace('/', '<>')
+        root = '%s/%s' % ('augment', root)
         sample_rate, samples = scipy.io.wavfile.read(wav)
         aug = change_pitch_speech(samples)
         librosa.output.write_wav(
@@ -153,5 +146,6 @@ for no, wav in enumerate(wavs):
             sample_rate,
             norm = True,
         )
-    except:
+    except Exception as e:
+        print(e)
         pass

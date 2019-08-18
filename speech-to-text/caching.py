@@ -3,6 +3,8 @@ import librosa
 import os
 import scipy
 import tqdm
+import glob
+import json
 
 sampling_rate = 22050
 n_fft = 2048
@@ -32,24 +34,16 @@ def reduce_frames(x, r_factor):
     return np.reshape(padded, (-1, C * r_factor))
 
 
-if not os.path.exists('spectrogram'):
-    os.mkdir('spectrogram')
+if not os.path.exists('spectrogram-train'):
+    os.mkdir('spectrogram-train')
 
-tolong_sebut = [
-    'tolong-sebut/' + i for i in os.listdir('tolong-sebut') if '.wav' in i
-]
-sebut_perkataan_man = [
-    'sebut-perkataan-man/' + i
-    for i in os.listdir('sebut-perkataan-man')
-    if '.wav' in i
-]
-sebut_perkataan_woman = [
-    'sebut-perkataan-woman/' + i
-    for i in os.listdir('sebut-perkataan-woman')
-    if '.wav' in i
-]
+if not os.path.exists('spectrogram-test'):
+    os.mkdir('spectrogram-test')
 
-wavs = tolong_sebut + sebut_perkataan_man + sebut_perkataan_woman
+with open('train-test.json') as fopen:
+    wavs = json.load(fopen)['train']
+
+wavs = wavs + glob.glob('augment/*.wav')
 
 for path in tqdm.tqdm(wavs):
     try:
@@ -57,7 +51,21 @@ for path in tqdm.tqdm(wavs):
         root = root.replace('/', '-')
         spectrogram = get_spectrogram(path)
         spectrogram = reduce_frames(spectrogram, reduction_factor)
-        np.save('spectrogram/%s.npy' % (root), spectrogram)
+        np.save('spectrogram-train/%s.npy' % (root), spectrogram)
+    except Exception as e:
+        print(e)
+        pass
+
+with open('train-test.json') as fopen:
+    wavs = json.load(fopen)['test']
+
+for path in tqdm.tqdm(wavs):
+    try:
+        root, ext = os.path.splitext(path)
+        root = root.replace('/', '-')
+        spectrogram = get_spectrogram(path)
+        spectrogram = reduce_frames(spectrogram, reduction_factor)
+        np.save('spectrogram-test/%s.npy' % (root), spectrogram)
     except Exception as e:
         print(e)
         pass
