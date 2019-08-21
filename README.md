@@ -119,7 +119,9 @@ Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset
 
 ### [Optical Character Recognition](optical-character-recognition)
 
-1. CNN + LSTM RNN, test accuracy 91.22%
+Trained on [OCR Jawi to Malay](https://github.com/huseinzol05/Malaya-Dataset/tree/master/ocr#malay-to-jawi)
+
+1. CNN + LSTM RNN, test accuracy 63.86%
 
 ### [Question-Answer](question-answer)
 
