@@ -122,6 +122,7 @@ Trained on [Malaysia news dataset](https://github.com/huseinzol05/Malaya-Dataset
 Trained on [OCR Jawi to Malay](https://github.com/huseinzol05/Malaya-Dataset/tree/master/ocr#malay-to-jawi)
 
 1. CNN + LSTM RNN, test accuracy 63.86%
+2. Im2Latex, test accuracy 89.38%
 
 ### [Question-Answer](question-answer)
 
