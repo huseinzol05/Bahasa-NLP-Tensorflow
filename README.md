@@ -148,6 +148,7 @@ Trained on [Kamus speech dataset](https://github.com/huseinzol05/Malaya-Dataset/
 2. Wavenet, test accuracy 10.21%
 3. Deep speech 2, test accuracy 56.51%
 4. Dilated-CNN, test accuracy 59.31%
+5. Im2Latex, test accuracy 58.59%
 
 ### [Text to Speech](text-to-speech)
 
