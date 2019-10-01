@@ -62,11 +62,16 @@ Trained on [Bahasa fakenews dataset](https://github.com/huseinzol05/Malaya-Datas
 
 ### [Dependency Parsing](dependency-parsing)
 
-Trained on [Bahasa dependency parsing dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/dependency).
+Trained on [Bahasa dependency parsing dataset](https://github.com/huseinzol05/Malaya-Dataset/tree/master/dependency). 80% to train, 20% to test.
 
-1. Bidirectional LSTM + CRF
-2. Bidirectional LSTM + CRF + Bahdanau
-3. Bidirectional LSTM + CRF + Luong
+Accuracy based on arc, types and root accuracies after 10 epochs only.
+
+1. Bidirectional RNN + CRF + Biaffine, arc accuracy 60.64%, types accuracy 58.68%, root accuracy 89.03%
+2. Bidirectional RNN + Bahdanau + CRF + Biaffine, arc accuracy 60.51%, types accuracy 59.01%, root accuracy 88.99%
+3. Bidirectional RNN + Luong + CRF + Biaffine, arc accuracy 60.60%, types accuracy 59.06%, root accuracy 89.76%
+4. BERT Base + CRF + Biaffine, arc accuracy 58.55%, types accuracy 58.12%, root accuracy 88.87%
+5. Bidirectional RNN + Biaffine Attention + Cross Entropy, arc accuracy 69.53%, types accuracy 65.38%, root accuracy 90.71%
+6. BERT Base + Biaffine Attention + Cross Entropy, arc accuracy 77.03%, types accuracy 66.73%, root accuracy 88.38%
 
 ### [English-Malay Translation](english-malay-translation)
 
