@@ -102,6 +102,8 @@ Trained on [Bahasa entity dataset](https://github.com/huseinzol05/Malaya-Dataset
 1. Bidirectional LSTM + CRF
 2. Bidirectional LSTM + CRF + Bahdanau
 3. Bidirectional LSTM + CRF + Luong
+4. Bert-Bahasa-Base + CRF, test accuracy 95.17%
+5. XLNET-Bahasa-Base + CRF, test accuracy 95.58%
 
 ### [Abstractive Summarization](abstractive-summarization)
 
