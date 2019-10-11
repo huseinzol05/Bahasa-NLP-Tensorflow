@@ -72,6 +72,7 @@ Accuracy based on arc, types and root accuracies after 10 epochs only.
 4. BERT Base + CRF + Biaffine, arc accuracy 58.55%, types accuracy 58.12%, root accuracy 88.87%
 5. Bidirectional RNN + Biaffine Attention + Cross Entropy, arc accuracy 69.53%, types accuracy 65.38%, root accuracy 90.71%
 6. BERT Base + Biaffine Attention + Cross Entropy, arc accuracy 77.03%, types accuracy 66.73%, root accuracy 88.38%
+7. XLNET Base + Biaffine Attention + Cross Entropy, arc accuracy 93.50%, types accuracy 92.48%, root accuracy 94.46%
 
 ### [English-Malay Translation](english-malay-translation)
 
