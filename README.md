@@ -94,7 +94,7 @@ Trained on [Bahasa entity dataset](https://github.com/huseinzol05/Malaya-Dataset
 4. BERT Multilanguage, test accuracy 96.43%
 5. BERT-Bahasa Base, test accuracy 98.11%
 6. BERT-Bahasa Small, test accuracy 98.47%
-7. XLNET-Bahasa Base, test accuracy 31.47%
+7. XLNET-Bahasa Base, test accuracy 98.008%
 
 ### [POS Tagging](pos-tagging)
 
